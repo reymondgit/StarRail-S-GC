@@ -12,7 +12,7 @@ Step 2: Unzip the archive.
 
 Step 3: Compile code
 
-Step 5: Run compiled HSR-Launcher.exe
+Step 5: Run compiled HSR-Launcher.exe (found in StarRail-S-GC/Release)
 
 Step 6: Select StarRail.exe.
 
