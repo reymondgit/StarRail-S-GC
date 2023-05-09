@@ -1,16 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// #include "core.hpp"
-
 #include <iostream>
 
-// #include "globals.hpp"
-
-// #include "utils/config.h"
-// #include "utils/hooks.h"
-// #include "utils/utils.h"
-//
-// #include "overlay/overlay.h"
 #include "overlay/device.h"
 
 static HMODULE h_module = 0;
