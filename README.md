@@ -12,7 +12,7 @@ Step 2: Unzip the archive.
 
 Step 3: Compile code
 
-Step 5: Run compiled HSR-Launcher.exe
+Step 5: Run compiled HSR-Launcher.exe (found in StarRail-S-GC/Release)
 
 Step 6: Select StarRail.exe.
 
@@ -24,18 +24,16 @@ Step 7: Done!
 
 ## Hotkeys
 
-Open/Close menu on F1
+- F1: Open/Close menu
 
-Auto-Dialogue on CAPSLOCK (if not automatically detected)
+- F2: Toggle World Speed
 
-World Speed on F2
+- F3: Toggle Battle Speed
 
-Battle Speed on F3
+- F4: Toggle Auto-Dialogue (CAPSLOCK if not automatically detected)
 
-Auto-Dialogue on F4 (CAPSLOCK if not automatically detected)
+- F5: Toggle Invisibility
 
-Invisibility on F5
+- F6: Toggle Force Auto-Battle
 
-Force Auto-Battle on F6
-
-Peeking on F7
+- F7: Toggle Peeking
