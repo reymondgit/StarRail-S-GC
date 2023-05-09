@@ -22,6 +22,8 @@ namespace features::dialogue {
               keybd_event(VK_SPACE, 0, 0, 0);
               Sleep(20);
               keybd_event(VK_SPACE, 0, KEYEVENTF_KEYUP, 0);
+              Sleep(20);
+
             } else {
               POINT cursor_pos;
               GetCursorPos(&cursor_pos);
@@ -29,6 +31,8 @@ namespace features::dialogue {
                           0);
               Sleep(10);
               mouse_event(MOUSEEVENTF_LEFTUP, cursor_pos.x, cursor_pos.y, 0, 0);
+              Sleep(20);
+
             }
           }
         }
