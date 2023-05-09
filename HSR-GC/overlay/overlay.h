@@ -148,6 +148,27 @@ namespace overlay
 			features::speedhack::UpdateBattle(game_assembly, unity_player);
 			features::other::Update(unity_player);
 
+			HWND target_window = FindWindowA("UnityWndClass", nullptr);
+
+			if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::world_speed) & 1) {
+				globals::world::speed_hack = !globals::world::speed_hack;
+			}
+			else if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::battle_speed) & 1) {
+				globals::battle::speed_hack = !globals::battle::speed_hack;
+			}
+			else if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::auto_dialogue) & 1) {
+				globals::world::auto_dialogue = !globals::world::auto_dialogue;
+			}
+			else if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::invisibility) & 1) {
+				globals::world::invisibility = !globals::world::invisibility;
+			}
+			else if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::force_auto_battle) & 1) {
+				globals::battle::force_battle = !globals::battle::force_battle;
+			}
+			else if (GetForegroundWindow() == target_window && GetAsyncKeyState(globals::hotkeys::peeking) & 1) {
+				globals::world::peeking = !globals::world::peeking;
+			}
+
 			Sleep(500);
 		}
 	}
