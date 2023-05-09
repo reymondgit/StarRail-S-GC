@@ -15,7 +15,6 @@ namespace hooks {
 	};
 
 	namespace game {
-
 		int phase = 0;
 
 		std::chrono::steady_clock::time_point last_call_time;
@@ -67,7 +66,6 @@ namespace hooks {
 	}
 
 	inline void Setup() {
-
 		std::vector<HookData> v_hooks = {};
 
 		if (globals::china_version) {

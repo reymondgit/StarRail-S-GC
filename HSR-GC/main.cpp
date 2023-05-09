@@ -10,8 +10,7 @@ namespace anti_cheat {
 	CREATE_FILE_W p_CreateFileW = nullptr;
 	CREATE_FILE_W t_CreateFileW;
 
-	HANDLE WINAPI h_CreateFileW(LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)
-	{
+	HANDLE WINAPI h_CreateFileW(LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile) {
 		if (memcmp(lpFileName, L"\\\\.\\ACE-BASE", 24) == 0) {
 			wprintf(L"[>] Thread (%i) attempting to communicate with anti-cheat driver -> %s\n", GetCurrentThreadId(), lpFileName);
 
@@ -22,22 +21,19 @@ namespace anti_cheat {
 	}
 
 	void Setup(uint64_t srbase) {
-		if (MH_Initialize() != MH_OK)
-		{
+		if (MH_Initialize() != MH_OK) {
 			puts("[-] Failed to initialize MinHook library");
 
 			return;
 		}
 
-		if (MH_CreateHookApiEx(L"kernelbase", "CreateFileW", &anti_cheat::h_CreateFileW, reinterpret_cast<void**>(&p_CreateFileW), reinterpret_cast<void**>(&t_CreateFileW)) != MH_OK)
-		{
+		if (MH_CreateHookApiEx(L"kernelbase", "CreateFileW", &anti_cheat::h_CreateFileW, reinterpret_cast<void**>(&p_CreateFileW), reinterpret_cast<void**>(&t_CreateFileW)) != MH_OK) {
 			puts("[-] Failed to create hook for CreateFileW function");
 
 			return;
 		}
 
-		if (MH_EnableHook(t_CreateFileW) != MH_OK)
-		{
+		if (MH_EnableHook(t_CreateFileW) != MH_OK) {
 			puts("[-] Failed to enable hook for CreateFileW function");
 
 			return;
@@ -49,10 +45,8 @@ namespace anti_cheat {
 	}
 }
 
-void Setup()
-{
-	if (!config::Load(anti_cheat::h_module))
-	{
+void Setup() {
+	if (!config::Load(anti_cheat::h_module)) {
 		config::Save();
 		Sleep(200);
 
@@ -77,8 +71,7 @@ void Setup()
 
 	if (!Direct3D.Initialization())
 		puts("[-] Failed to setup Direct3D!");
-	else
-	{
+	else {
 		puts("[+] Direct3D setup successfully!");
 		printf("[>] Direct3D Present: %p\n[>] Direct3D ResizeBuffers: %p\n", Direct3D.Present, Direct3D.ResizeBuffers);
 	}
@@ -90,10 +83,8 @@ void Setup()
 	return overlay::Main();
 }
 
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
-{
-	if (ul_reason_for_call == DLL_PROCESS_ATTACH)
-	{
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
+	if (ul_reason_for_call == DLL_PROCESS_ATTACH) {
 		anti_cheat::h_module = hModule;
 
 		AllocConsole();

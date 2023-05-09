@@ -14,8 +14,7 @@ namespace device {
 	inline PresentFn oPresent = nullptr;
 	inline ResizeBuffersFn oResizeBuffers = nullptr;
 
-	inline LRESULT WINAPI WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-	{
+	inline LRESULT WINAPI WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 		if (globals::unload) {
 			return CallWindowProc(oWndProc, hWnd, uMsg, wParam, lParam);
 		}
@@ -33,8 +32,7 @@ namespace device {
 		return true;
 	}
 
-	inline HRESULT Present(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
-	{
+	inline HRESULT Present(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags) {
 		if (globals::unload) {
 			return oPresent(pSwapChain, SyncInterval, Flags);
 		}
@@ -137,8 +135,7 @@ namespace device {
 		return oPresent(pSwapChain, SyncInterval, Flags);
 	}
 
-	inline HRESULT ResizeBuffers(IDXGISwapChain* pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
-	{
+	inline HRESULT ResizeBuffers(IDXGISwapChain* pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags) {
 		if (globals::unload) {
 			return oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
 		}
@@ -166,8 +163,7 @@ namespace device {
 		return hr;
 	}
 
-	inline bool Setup()
-	{
+	inline bool Setup() {
 		static auto CreateHook = [](LPVOID pTarget, LPVOID pDetour, LPVOID* ppOriginal)->bool
 		{
 			return MH_CreateHook(pTarget, pDetour, ppOriginal) == MH_OK && MH_EnableHook(pTarget) == MH_OK;

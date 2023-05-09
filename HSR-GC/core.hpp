@@ -32,9 +32,5 @@
 #include "utils/utils.h"
 #include "utils/config.h"
 
-//#include "features/speedhack.h"
-//#include "features/dialogue.h"
-//#include "features/other.h"
-
 #include "overlay/overlay.h"
 #include "overlay/device.h"

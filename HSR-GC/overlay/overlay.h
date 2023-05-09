@@ -5,10 +5,8 @@
 #include "../features/speedhack.h"
 #include "../features/other.h"
 
-namespace overlay
-{
-	inline void Update()
-	{
+namespace overlay {
+	inline void Update() {
 		if (!globals::show_menu)
 			return;
 
@@ -18,8 +16,7 @@ namespace overlay
 
 		ImGui::BeginTabBar("##tabs");
 
-		if (ImGui::BeginTabItem("World"))
-		{
+		if (ImGui::BeginTabItem("World")) {
 			ImGui::Checkbox("Speed Modifier", &globals::world::speed_hack);
 
 			if (globals::world::speed_hack) {
@@ -41,8 +38,7 @@ namespace overlay
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Battle"))
-		{
+		if (ImGui::BeginTabItem("Battle")) {
 			ImGui::Checkbox("Speed Modifier", &globals::battle::speed_hack);
 
 			if (globals::battle::speed_hack) {
@@ -62,8 +58,7 @@ namespace overlay
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Other"))
-		{
+		if (ImGui::BeginTabItem("Other")) {
 			ImGui::Checkbox("FPS Unlock", &globals::other::fps_unlock);
 
 			if (globals::other::fps_unlock) {
@@ -73,8 +68,7 @@ namespace overlay
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Debug"))
-		{
+		if (ImGui::BeginTabItem("Debug")) {
 
 			ImGui::Text("Phase: %s", hooks::game::get_phase_in_text());
 			ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
@@ -82,19 +76,15 @@ namespace overlay
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Settings"))
-		{
+		if (ImGui::BeginTabItem("Settings")) {
 			static bool pinWindow = false;
 
-			if (ImGui::Checkbox("Pin Window", &pinWindow))
-			{
-				if (pinWindow)
-				{
+			if (ImGui::Checkbox("Pin Window", &pinWindow)) {
+				if (pinWindow) {
 					classFinderWindowFlags |= ImGuiWindowFlags_NoMove;
 					classFinderWindowFlags |= ImGuiWindowFlags_NoResize;
 				}
-				else
-				{
+				else {
 					classFinderWindowFlags &= ~ImGuiWindowFlags_NoMove;
 					classFinderWindowFlags &= ~ImGuiWindowFlags_NoResize;
 				}
@@ -117,8 +107,7 @@ namespace overlay
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("About"))
-		{
+		if (ImGui::BeginTabItem("About")) {
 			ImGui::Text("About this project");
 			ImGui::Text("This project was created by Z4ee");
 			ImGui::Text("This project is free, not for sell");
@@ -173,8 +162,7 @@ namespace overlay
 		}
 	}
 
-	inline void Setup()
-	{
+	inline void Setup() {
 		hooks::Setup();
 
 		auto hook = ImGuiContextHook();

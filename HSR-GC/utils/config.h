@@ -8,11 +8,9 @@
 
 using json = nlohmann::json;
 
-namespace config 
-{
+namespace config {
 
-	std::string GetModulePath(HMODULE hModule) 
-	{
+	std::string GetModulePath(HMODULE hModule) {
 		char path[MAX_PATH] = {};
 		GetModuleFileNameA(hModule, path, MAX_PATH);
 
@@ -22,7 +20,7 @@ namespace config
 	static std::filesystem::path file_path;
 
 
-	struct Config 
+	struct Config
 	{
 		bool EnableWorldSpeedHack = false;
 		float GlobalSpeed = 1.f;
@@ -47,7 +45,7 @@ namespace config
 		Config,
 		EnableWorldSpeedHack,
 		GlobalSpeed,
-		DialogueSpeed, 
+		DialogueSpeed,
 		DumpEnemies,
 		Peeking,
 		AutoDialogue,
@@ -61,8 +59,7 @@ namespace config
 		Fps
 	)
 
-	bool Load(HMODULE hModule)
-	{
+		bool Load(HMODULE hModule) {
 		json j;
 
 		file_path = GetModulePath(hModule) + "\\config.json";
@@ -92,8 +89,7 @@ namespace config
 		return true;
 	}
 
-	void Save() 
-	{
+	void Save() {
 		const json j = Config
 		{
 			globals::world::speed_hack,

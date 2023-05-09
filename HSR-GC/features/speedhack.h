@@ -2,7 +2,6 @@
 
 namespace features::speedhack {
 	void UpdateSpeed(const float speed, uint64_t game_assembly, uint64_t unity_player, const bool is_battle) {
-
 		if (is_battle) {
 			utils::Write<float>(utils::Read<__int64>(utils::Read<__int64>(game_assembly + 0x8CAA6A0) + 0xC0) + 0x1DC, speed);
 			utils::Write<float>(utils::Read<__int64>(unity_player + 0x1D21D78) + 0xFC, 1.f);
