@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "../globals.hpp"
+#include "utils.h"
 
 namespace hooks {
   static __int64(__fastcall *o_setcurrentphase)(__int64 a1, int a2, __int64 a3,

@@ -54,6 +54,7 @@
     <ClInclude Include="globals.hpp" />
     <ClInclude Include="overlay\device.h" />
     <ClInclude Include="overlay\overlay.h" />
+    <ClInclude Include="utils\anti_cheat.h" />
     <ClInclude Include="utils\config.h" />
     <ClInclude Include="utils\hooks.h" />
     <ClInclude Include="utils\utils.h" />

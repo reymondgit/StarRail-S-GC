@@ -2,7 +2,6 @@
 
 #include <Windows.h>
 #include <cstdint>
-#include <optional>
 
 namespace utils {
   template <typename T> constexpr void Write(__int64 address, T value) {
