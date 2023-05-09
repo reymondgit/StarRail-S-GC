@@ -1,5 +1,7 @@
 # Honkai: Star Rail Simple Game Cheat:
 
+[English Version](https://github.com/ky-ler/StarRail-S-GC) | [Chinese Version](https://github.com/ky-ler/StarRail-S-GC/tree/localization/chinese)
+
 This repository provides code for a simple cheat for the game Honkai Star Rail. For informational purposes only. Use at your own risk.
 
 # Instruction:
