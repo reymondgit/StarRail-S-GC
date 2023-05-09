@@ -72,6 +72,10 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="features\dialogue.cpp" />
+    <ClCompile Include="features\other.cpp" />
+    <ClCompile Include="features\speedhack.cpp" />
+    <ClCompile Include="overlay\overlay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\Direct3D\Direct3D.h">
@@ -131,20 +135,15 @@
     <ClInclude Include="dependencies\MinHook\hde\hde32.h">
       <Filter>core\dependencies\MinHook\hde</Filter>
     </ClInclude>
-    <ClInclude Include="core.hpp">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="overlay\overlay.h">
-      <Filter>main</Filter>
-    </ClInclude>
     <ClInclude Include="globals.hpp" />
     <ClInclude Include="utils\config.h" />
-    <ClInclude Include="utils\utils.h" />
     <ClInclude Include="overlay\device.h" />
     <ClInclude Include="dependencies\Json\json.hpp" />
     <ClInclude Include="features\dialogue.h" />
     <ClInclude Include="utils\hooks.h" />
     <ClInclude Include="features\speedhack.h" />
     <ClInclude Include="features\other.h" />
+    <ClInclude Include="utils\utils.h" />
+    <ClInclude Include="overlay\overlay.h" />
   </ItemGroup>
 </Project>

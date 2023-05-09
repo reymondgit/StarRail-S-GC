@@ -22,10 +22,12 @@
     <ClCompile Include="dependencies\MinHook\hde\hde64.c" />
     <ClCompile Include="dependencies\MinHook\hook.c" />
     <ClCompile Include="dependencies\MinHook\trampoline.c" />
+    <ClCompile Include="features\dialogue.cpp" />
+    <ClCompile Include="features\other.cpp" />
+    <ClCompile Include="features\speedhack.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core.hpp" />
     <ClInclude Include="dependencies\Json\json.hpp" />
     <ClInclude Include="dependencies\Direct3D\Direct3D.h" />
     <ClInclude Include="dependencies\ImGui\backends\imgui_impl_dx11.h" />
@@ -55,6 +57,7 @@
     <ClInclude Include="utils\config.h" />
     <ClInclude Include="utils\hooks.h" />
     <ClInclude Include="utils\utils.h" />
+    <ClCompile Include="overlay\overlay.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
