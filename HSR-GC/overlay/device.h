@@ -72,16 +72,14 @@ namespace device {
       pDevice->CreateRenderTargetView(pBackBuffer, &desc,
                                       &mainRenderTargetView);
       pBackBuffer->Release();
+
       oWndProc =
           (WNDPROC)SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG_PTR)WndProc);
+
       ImGui::CreateContext();
       ImGui::GetIO().IniFilename = nullptr;
       ImGui::GetIO().LogFilename = nullptr;
-      ImGui::GetStyle().FrameRounding = 3.0f;
-      ImGui::GetStyle().WindowRounding = 2.0f;
-      ImGui::GetStyle().GrabRounding = 2.0f;
-      ImGui::GetStyle().WindowRounding = 3.0f;
-      ImGui::GetStyle().WindowTitleAlign = {0.5f, 0.5f};
+
       {
         ImGuiStyle &style = ImGui::GetStyle();
         style.Alpha = 1.0f;
