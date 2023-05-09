@@ -138,13 +138,11 @@
     <ClInclude Include="globals.hpp" />
     <ClInclude Include="utils\config.h" />
     <ClInclude Include="dependencies\Json\json.hpp" />
-    <ClInclude Include="features\dialogue.h" />
     <ClInclude Include="utils\hooks.h" />
-    <ClInclude Include="features\speedhack.h" />
-    <ClInclude Include="features\other.h" />
     <ClInclude Include="utils\utils.h" />
     <ClInclude Include="overlay\overlay.h" />
     <ClInclude Include="overlay\device.h" />
     <ClInclude Include="utils\anti_cheat.h" />
+    <ClInclude Include="features\features.h" />
   </ItemGroup>
 </Project>
