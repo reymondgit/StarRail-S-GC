@@ -42,7 +42,7 @@ void overlay::Update() {
     ImGui::Checkbox("Speed Modifier", &globals::battle::speed_hack);
 
     if (globals::battle::speed_hack) {
-      ImGui::SliderFloat("Battle", &globals::battle::battle_speed, 0.1f, 100.f,
+      ImGui::SliderFloat("Battle", &globals::battle::battle_speed, 0.1f, 10.f,
                          "%.1f");
     }
 
