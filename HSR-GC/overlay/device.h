@@ -136,10 +136,11 @@ namespace device {
             ImVec4(0.2000000029802322f, 0.2000000029802322f,
                    0.2156862765550613f, 1.0f);
         style.Colors[ImGuiCol_FrameBgHovered] =
-            ImVec4(0.1137254908680916f, 0.5921568870544434f,
-                   0.9254902005195618f, 1.0f);
+            ImVec4(0.2558823645114899f, 0.2558823645114899f,
+                   0.2558823645114899f, 1.0f);
         style.Colors[ImGuiCol_FrameBgActive] =
-            ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
+            ImVec4(0.3000000029802322f, 0.3000000029802322f,
+                   0.3156862765550613f, 1.0f);
         style.Colors[ImGuiCol_TitleBg] =
             ImVec4(0.1450980454683304f, 0.1450980454683304f,
                    0.1490196138620377f, 1.0f);
@@ -168,8 +169,8 @@ namespace device {
         style.Colors[ImGuiCol_SliderGrab] =
             ImVec4(0.1137254908680916f, 0.5921568870544434f,
                    0.9254902005195618f, 1.0f);
-        style.Colors[ImGuiCol_SliderGrabActive] =
-            ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
+        //style.Colors[ImGuiCol_SliderGrabActive] =
+        //    ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
         style.Colors[ImGuiCol_Button] =
             ImVec4(0.2000000029802322f, 0.2000000029802322f,
                    0.2156862765550613f, 1.0f);
@@ -217,28 +218,6 @@ namespace device {
                    0.1490196138620377f, 1.0f);
         style.Colors[ImGuiCol_TabUnfocusedActive] =
             ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
-        style.Colors[ImGuiCol_PlotLines] =
-            ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
-        style.Colors[ImGuiCol_PlotLinesHovered] =
-            ImVec4(0.1137254908680916f, 0.5921568870544434f,
-                   0.9254902005195618f, 1.0f);
-        style.Colors[ImGuiCol_PlotHistogram] =
-            ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
-        style.Colors[ImGuiCol_PlotHistogramHovered] =
-            ImVec4(0.1137254908680916f, 0.5921568870544434f,
-                   0.9254902005195618f, 1.0f);
-        style.Colors[ImGuiCol_TableHeaderBg] =
-            ImVec4(0.1882352977991104f, 0.1882352977991104f,
-                   0.2000000029802322f, 1.0f);
-        style.Colors[ImGuiCol_TableBorderStrong] =
-            ImVec4(0.3098039329051971f, 0.3098039329051971f,
-                   0.3490196168422699f, 1.0f);
-        style.Colors[ImGuiCol_TableBorderLight] =
-            ImVec4(0.2274509817361832f, 0.2274509817361832f,
-                   0.2470588237047195f, 1.0f);
-        style.Colors[ImGuiCol_TableRowBg] = ImVec4(0.0f, 0.0f, 0.0f, 0.0f);
-        style.Colors[ImGuiCol_TableRowBgAlt] =
-            ImVec4(1.0f, 1.0f, 1.0f, 0.05999999865889549f);
         style.Colors[ImGuiCol_TextSelectedBg] =
             ImVec4(0.0f, 0.4666666686534882f, 0.7843137383460999f, 1.0f);
         style.Colors[ImGuiCol_DragDropTarget] =
